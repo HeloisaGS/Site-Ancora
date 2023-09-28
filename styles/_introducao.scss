@@ -1,0 +1,31 @@
+@use "theme";
+/*Classe que será reutilizada em sobre mim, projetos e contatos*/
+@mixin color($cor-paragrafo:#808080, $cor-elemento: theme.$primary-color){
+    padding: 10% 5%;
+    text-align: center;
+    line-height: 1.5;
+    h2{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    hr{
+        margin: 0 auto; /*centralizar*/
+        border: none;
+        border-radius: 5px;
+        height: 5px;
+        width: 30px;
+        background-color: $cor-elemento;  
+    }
+    p{
+        margin: 20px 0;
+        color: $cor-paragrafo;
+        font-size: 18px;
+    }
+}
+.introducao{
+    @include color;
+}
+.introducao-contato{
+    @include color($cor-elemento: white, $cor-paragrafo:white);
+    color: white;
+}

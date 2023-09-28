@@ -1,0 +1,63 @@
+/*Para tablets 768px*/
+@media (max-width: 768px) {
+    /*Cabeçalho*/
+    nav{
+      display: none;
+    }
+    .header-info{
+      padding: 20px 0;
+    }
+    
+    /*Seção home*/
+    .home-redes{
+      display: none;
+    }
+    /*Seção sobre mim*/
+    .mais-sobre{
+      display: flex;
+      flex-direction: column;
+    }
+    .conheca{
+      margin-bottom: 50px;
+    }
+    .habilidades{
+      margin-left: 0;
+    }
+    /*Seção projetos*/
+    .projeto{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      margin-bottom: 20px;
+      padding: 0;
+      text-align: center;
+    }
+    .projeto{
+        img{
+            width: 90%;
+            margin-left: 0;
+        }
+        .btn-padrao{
+            align-self: center;
+        }
+    }
+    .descricao-projeto{
+      display: flex;
+      flex-direction: column;
+    }
+    /*Seção contatos*/
+    form{
+      margin: 0 5%;
+    } 
+    /*Rodapé*/
+    .rodape-info{
+      display: flex;
+      flex-direction: column;
+    }
+    .rodape-info {
+        div>p {
+            margin-bottom: 30px;
+        }
+    }
+  }

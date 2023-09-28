@@ -1,0 +1,18 @@
+
+//link com o _base.scss
+@use "base";
+//link com o _header.scss
+@use "header";
+//Link com _introducao.scss
+@use "introducao";
+//Links com os arquivos dentro da paasta section
+@use "./sections/home";
+@use "./sections/about-me";
+@use "./sections/projects";
+@use "./sections/contact";
+
+//link com o _footer.scss
+@use "footer";
+
+//media queries
+@use "mobile"

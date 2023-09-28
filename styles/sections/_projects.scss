@@ -1,0 +1,28 @@
+/*seção projetos*/
+#secao-projetos{
+    background-color: white;
+    margin-bottom: 100px;
+}
+.projeto{
+    display: flex;
+}
+.projeto{
+    img{
+        width: 50%;
+        margin-left: 5%;
+    }
+}
+.descricao-projeto{
+    margin: 5%;
+    width: 50%;
+    line-height: 1.5;
+}
+.descricao-projeto{
+    h3{
+        font-size: 25px;
+        margin: 25px 0;
+    }
+    p{
+        color: #808080;
+    }
+}

@@ -1,0 +1,61 @@
+@use "../theme";
+/*seção contato*/
+#secao-contato{
+    background:linear-gradient(to right, rgba(theme.$primary-color, 0.8), rgba(theme.$primary-color, 0.8)),url(../assets/common-bg.svg);
+    padding-bottom: 100px;
+}
+form{
+    margin: 0 20%;
+    background-color: white;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+form{
+    label{
+        color: rgb(102,102,102);
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    input{
+        background-color: #f0f0f0;
+        font-weight: bold;
+        border: none;
+        padding-left: 15px;
+    }
+    input::placeholder{
+        color:#999da4;
+    }
+}
+#nome, #email{
+    height: 50px;
+    border-radius: 5px;
+}
+#mensagem{
+    color:#999da4;
+    background-color: #f0f0f0;
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    resize: none;
+}
+#btn-enviar{
+    align-self: flex-end;
+    width: 200px;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 5px;
+    background-color: theme.$primary-color !important;
+    color: white;
+    font-size: 15px;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    &:hover{
+        transform: translateY(-5px);
+    }
+}

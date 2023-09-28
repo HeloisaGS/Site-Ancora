@@ -1,27 +1,50 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
   list-style: none;
-  /*overflow-x: hidden;*/
 }
-/*2 rem = 16px --> ele se adequa a quantidade de ao valor em px de alguma propriedade*/
-/*Cabeçalho*/
-a {
-  text-decoration: none;
-  color: inherit;
-}
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr 350px;
-  
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+i {
+  font-size: 30px;
+}
+
+/*Botões utilizados na seção sobre mim e projetos*/
+.btn-padrao {
+  display: flex;
+  align-self: flex-start;
+}
+
+.btn-padrao a {
+  background-color: #0062b9;
+  color: white;
+  margin-top: 30px;
+  padding: 15px 60px;
+  border-radius: 7px;
+  font-weight: 700;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.btn-padrao a:hover {
+  transform: translateY(-5px);
+}
+
+/*Cabeçalho*/
 header {
   display: flex;
   justify-content: space-between;
@@ -32,25 +55,24 @@ header {
   background-color: white;
 }
 
-nav>ul {
+nav ul {
   display: flex;
   margin-right: 30px;
 }
-
-nav>ul>li>a {
+nav a {
   display: block;
   padding: 30px 20px;
 }
-nav>ul>li>a:hover{
+nav a:hover {
   color: #0062b9;
 }
 
-header>.header-info {
+.header-info {
   display: flex;
   align-items: center;
 }
 
-header .avatar-img {
+.avatar-img {
   height: 40px;
   width: 40px;
   border: 1px solid black;
@@ -59,141 +81,152 @@ header .avatar-img {
   overflow: hidden;
 }
 
+/*Classe que será reutilizada em sobre mim, projetos e contatos*/
+.introducao {
+  padding: 10% 5%;
+  text-align: center;
+  line-height: 1.5;
+}
+.introducao h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.introducao hr {
+  margin: 0 auto; /*centralizar*/
+  border: none;
+  border-radius: 5px;
+  height: 5px;
+  width: 30px;
+  background-color: #0062b9;
+}
+.introducao p {
+  margin: 20px 0;
+  color: #808080;
+  font-size: 18px;
+}
+
+.introducao-contato {
+  padding: 10% 5%;
+  text-align: center;
+  line-height: 1.5;
+  color: white;
+}
+.introducao-contato h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.introducao-contato hr {
+  margin: 0 auto; /*centralizar*/
+  border: none;
+  border-radius: 5px;
+  height: 5px;
+  width: 30px;
+  background-color: white;
+}
+.introducao-contato p {
+  margin: 20px 0;
+  color: white;
+  font-size: 18px;
+}
+
 /*seção home*/
-#secao-home{ 
+#secao-home {
   margin-top: 60px;
-  background:linear-gradient(to right, rgba(0,98,185,0.8), rgba(0,98,185,0.8)),url(../assets/common-bg.svg);
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../assets/common-bg.svg);
   display: flex;
   flex-direction: row-reverse;
-
 }
-.home-apresentacao{
+
+.home-apresentacao {
   padding: 20% 5%;
-  text-align: center;  
+  text-align: center;
   display: grid;
   grid-template-rows: auto auto auto;
   row-gap: 50px;
   color: white;
 }
 
-.home-apresentacao > h1{
-  font-size: 50px;  
+.home-apresentacao h1 {
+  font-size: 50px;
 }
-.home-apresentacao > p{
+.home-apresentacao p {
   font-size: 20px;
   line-height: 1.5;
 }
 
-.btn-projetos{
+.btn-projetos {
   display: flex;
   justify-content: center;
 }
-.btn-projetos > a{
+
+.btn-projetos a {
   background-color: white;
   color: black;
   padding: 20px 70px;
   border-radius: 7px;
   font-weight: 700;
-  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
-.btn-projetos > a:hover{
+.btn-projetos a:hover {
   transform: translateY(-5px);
 }
 
-.home-redes{
+.home-redes {
   padding: 20% 0;
 }
-.home-redes i{
-  font-size: 30px;
+
+.home-redes i {
   text-align: center;
   border: 1px solid white;
   color: white;
   padding: 10px;
   display: flex;
   flex-direction: column;
-
 }
-.home-redes i:hover{
+.home-redes i:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*Seção sobre mim*/
-#secao-sobre{
+#secao-sobre {
   background-color: #f5f5f5;
 }
-/*Classe da primeira div que se repete em sobre mim,  projetos e contatos*/
-.introducao{
-  padding: 10% 5%;
-  text-align: center;
-  line-height: 1.5;
-}
-.introducao >h2{
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-.introducao > hr{
-  margin: 0 auto; /*centralizar*/
-  border: none;
-  border-radius: 5px;
-  height: 5px;
-  width: 30px;
-  background-color:  #0062b9;
-}
-.introducao >p{
-  margin: 20px 0;
-  color: #808080;
-  font-size: 18px;
-}
-/*segunda div do sobre mim*/
-.mais-sobre{
+
+.mais-sobre {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin: 0 5% 0% 5%;/*top right bottom left*/
+  margin: 0 5% 0% 5%; /*top right bottom left*/
   padding-bottom: 10%;
 }
-.conheca{
+
+.conheca {
   margin-right: 40px;
   line-height: 1.5;
 }
-.conheca >h3{
+
+.conheca h3 {
   font-size: 30px;
   margin-bottom: 20px;
 }
-.conheca >p{
+.conheca p {
   color: #808080;
   margin-bottom: 15px;
 }
-/*Botão padrão nas seções sobre mim e projetos*/
-.btn-padrao{
-  display: flex;
-  /* justify-content: start; */
-  align-self: flex-start;
-}
-.btn-padrao > a{
-  background-color: #0062b9;
-  color: white;
-  margin-top: 30px;
-  padding: 15px 60px;
-  border-radius: 7px;
-  font-weight: 700;
-  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
-}
-.btn-padrao > a:hover{
-  transform: translateY(-5px);
-}
-.habilidades{
+
+.habilidades {
   margin-left: 40px;
 }
-.habilidades >h3{
+
+.habilidades h3 {
   font-size: 30px;
   margin-bottom: 50px;
 }
-.habilidades > ul {
+.habilidades ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
-.habilidades > ul > li {
+.habilidades li {
   margin-right: 15px;
   margin-bottom: 15px;
   background-color: #e4e4e4;
@@ -205,45 +238,41 @@ header .avatar-img {
 }
 
 /*seção projetos*/
-#secao-projetos{
+#secao-projetos {
   background-color: white;
   margin-bottom: 100px;
 }
-.projeto{
+
+.projeto {
   display: flex;
 }
-.projeto > img{
+
+.projeto img {
   width: 50%;
   margin-left: 5%;
 }
-.descricao-projeto{
+
+.descricao-projeto {
   margin: 5%;
   width: 50%;
   line-height: 1.5;
 }
-.descricao-projeto > h3{
+
+.descricao-projeto h3 {
   font-size: 25px;
   margin: 25px 0;
 }
-.descricao-projeto > p{
+.descricao-projeto p {
   color: #808080;
 }
-/*Seção contato*/
-#secao-contato{
-  background:linear-gradient(to right, rgba(0,98,185,0.8), rgba(0,98,185,0.8)),url(../assets/common-bg.svg);
+
+/*seção contato*/
+#secao-contato {
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../assets/common-bg.svg);
   padding-bottom: 100px;
 }
-/*Mudança nas cores da primeira div (classe introducao)*/
-#secao-contato {
-  color: white;
-}
-#secao-contato > div > hr{
-  background-color: white; 
-}
-#secao-contato > div > p{
-  color: white;
-}
-#secao-contato > form{
+
+form {
   margin: 0 20%;
   background-color: white;
   padding: 5%;
@@ -251,30 +280,35 @@ header .avatar-img {
   flex-direction: column;
   border-radius: 5px;
 }
-#secao-contato > form > label{
-  color: rgb(102,102,102);
+
+form label {
+  color: rgb(102, 102, 102);
   font-weight: bold;
   font-size: 13px;
   margin-bottom: 15px;
 }
-#secao-contato > form > input{
+form input {
   background-color: #f0f0f0;
   font-weight: bold;
   border: none;
   padding-left: 15px;
 }
-#secao-contato > form > input::placeholder{
-  color:#999da4;
+form input::-moz-placeholder {
+  color: #999da4;
+}
+form input::placeholder {
+  color: #999da4;
 }
 
-#nome, #email{
+#nome, #email {
   height: 50px;
   border-radius: 5px;
 }
-#mensagem{
-  color:#999da4;
+
+#mensagem {
+  color: #999da4;
   background-color: #f0f0f0;
-  font-family:'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 13px;
   font-weight: bold;
   border: none;
@@ -282,7 +316,8 @@ header .avatar-img {
   padding: 15px;
   resize: none;
 }
-#btn-enviar{
+
+#btn-enviar {
   align-self: flex-end;
   width: 200px;
   height: 50px;
@@ -291,76 +326,74 @@ header .avatar-img {
   background-color: #0062b9 !important;
   color: white;
   font-size: 15px;
-  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
-#btn-enviar:hover{
+#btn-enviar:hover {
   transform: translateY(-5px);
 }
+
 /*Rodapé*/
-footer{
+footer {
   background-color: black;
   color: white;
 }
-footer > hr {
+
+footer hr {
   height: 1px;
   width: 90%;
   margin: 0 auto;
   background-color: white;
-  border: none
+  border: none;
 }
-footer > p{
+footer p {
   text-align: center;
   font-size: 12px;
-  margin: 40px
+  margin: 40px;
 }
-.rodape-info{
+
+.rodape-info {
   display: flex;
   justify-content: space-between;
   margin: 80px 5%;
   line-height: 1.5;
 }
-/*
-O QUE ESTAVA CAUSANDO O PROBLEMA
-.rodape-info > div{
-  width: 500px;
-}*/
-.rodape-info > div > h3{
+
+.rodape-info h3 {
   margin-bottom: 20px;
   font-size: 20px;
 }
-.rodape-info > div > p{
+.rodape-info p {
   font-size: 15px;
+  margin: 0;
+  text-align: left;
 }
-.rodape-info i{
-  font-size: 30px;
-}
+
 /*Para tablets 768px*/
 @media (max-width: 768px) {
   /*Cabeçalho*/
-  nav{
+  nav {
     display: none;
   }
-  .header-info{
+  .header-info {
     padding: 20px 0;
   }
-  
   /*Seção home*/
-  .home-redes{
+  .home-redes {
     display: none;
   }
   /*Seção sobre mim*/
-  .mais-sobre{
+  .mais-sobre {
     display: flex;
     flex-direction: column;
   }
-  .conheca{
+  .conheca {
     margin-bottom: 50px;
   }
-  .habilidades{
+  .habilidades {
     margin-left: 0;
   }
   /*Seção projetos*/
-  .projeto{
+  .projeto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,28 +402,27 @@ O QUE ESTAVA CAUSANDO O PROBLEMA
     padding: 0;
     text-align: center;
   }
-  .descricao-projeto{
-    display: flex;
-    flex-direction: column;
-  }
-  .projeto img{
+  .projeto img {
     width: 90%;
     margin-left: 0;
   }
-  .projeto .btn-padrao{
-    /* margin: 0 20%; */
+  .projeto .btn-padrao {
     align-self: center;
   }
-  /*Seção contatos*/
-  #secao-contato form{
-    margin: 0 5%;
-  } 
-  /*Rodapé*/
-  .rodape-info{
+  .descricao-projeto {
     display: flex;
     flex-direction: column;
   }
-  .rodape-info >div >p {
+  /*Seção contatos*/
+  form {
+    margin: 0 5%;
+  }
+  /*Rodapé*/
+  .rodape-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .rodape-info div > p {
     margin-bottom: 30px;
   }
-}
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,45 @@
+@use "theme";
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+  
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr 350px;
+    
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+i{
+    font-size: 30px;
+}
+
+/*Botões utilizados na seção sobre mim e projetos*/
+.btn-padrao{
+    display: flex;
+    align-self: flex-start;
+}
+.btn-padrao{
+    a{
+        background-color: theme.$primary-color;
+        color: white;
+        margin-top: 30px;
+        padding: 15px 60px;
+        border-radius: 7px;
+        font-weight: 700;
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+        
+        &:hover{
+            transform: translateY(-5px);
+        }
+    }
+}
